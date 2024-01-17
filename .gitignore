@@ -1,0 +1,3 @@
+# List of files to ignore in the Replit project.
+.replit
+replit.nix
