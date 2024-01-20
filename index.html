@@ -8,11 +8,224 @@
     Portfolio Project - Leow Kean Tat (Kaz)
   </title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <!-- Font Awesome APIs -->
+  <script src="https://kit.fontawesome.com/fdebea0a02.js" crossorigin="anonymous"></script>
+  <!-- ----------------- -->
+  <!-- Google Fonts APIs -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- List of Fonts to experiment around -->
+  <!--- Dancing Script - https://fonts.google.com/specimen/Dancing+Script -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  
+  <!--- Poppins - https://fonts.google.com/specimen/Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+  <!-- Rancho - https://fonts.google.com/specimen/Rancho -->
+  <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+  <!-- ----------------- -->
 </head>
 
-<body>
+<body>  
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/logo" alt="" class="logo">
+        <ul id="side-menu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+      </nav>
+      <div class="header-text">
+        <p>Software Developer</p>
+        <h1>My name's <span>Leow Kean Tat</span>.<br>I'm from Penang, Malaysia.</h1>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ------About------ -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/user.jpg">
+        </div>
+        <div class="about-col-2">
+          
+          <h1 class="subtitle">About Me</h1>
+          <p id="about-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris feugiat suscipit nisi, non aliquam leo convallis non. Integer eget sodales justo. Aliquam sagittis magna tellus, in vehicula lorem porta vitae. Fusce sed dignissim mauris. Suspendisse est nibh, egestas non iaculis ut, tincidunt vel sem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque non pharetra tellus. Phasellus a tempor velit.</p>
 
-  <script src="script.js">
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+            <p class="tab-links" onclick="openTab('experience')">Experience</p>
+            <p class="tab-links" onclick="openTab('education')">Education</p>
+          </div>
+          <!-- Skills -->
+          <div id="skills" class="tab-contents active-tab">
+            <ul>
+              <li><span>Skill 1</span><br>Description 1</li>
+              <li><span>Skill 2</span><br>Description 2</li>
+              <li><span>Skill 3</span><br>Description 3</li>
+              <li><span>Skill 4</span><br>Description 4</li>
+            </ul>
+          </div>
+          <!-- Experience -->
+          <div id="experience" class="tab-contents">
+            <ul>
+              <li><span>Experience 1</span><br>Description 1</li>
+              <li><span>Experience 2</span><br>Description 2</li>
+            </ul>
+          </div>
+          <!-- Education -->
+          <div id="education" class="tab-contents">
+            <ul>
+              <li><span>Education 1</span><br>Description 1</li>
+              <li><span>Education 2</span><br>Description 2</li>
+              <li><span>Education 3</span><br>Description 3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- -----Services---- -->
+  <div id="services">
+    <div class="container">
+      <h1 class="subtitle">My Services</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>Service 1</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a href="#">Learn More</a>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-gamepad"></i>
+          <h2>Service 2</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a href="#">Learn More</a>
+        </div>
+
+        <div>
+          <i class="fa-brands fa-android"></i>
+          <h2>Service 3</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ----Portfolio---- -->
+  <div id="portfolio">
+    <div class="container">
+      <h1 class="subtitle">Portfolio</h1>
+      <div class="work-list">
+        <div class="work">
+          
+          <img src="images/work-1.png" alt="">
+          <div class="layer">
+            <h3>App 1</h3>
+            <p>Description Here</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+          
+        </div>
+        <div class="work">
+          
+          <img src="images/work-2.png" alt="">
+          <div class="layer">
+            <h3>App 2</h3>
+            <p>Description Here</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+          
+        </div>
+        <div class="work">
+          
+          <img src="images/work-3.png" alt="">
+          <div class="layer">
+            <h3>App 3</h3>
+            <p>Description Here</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+          
+        </div>
+      </div>
+      <a href="#" class="btn">See More</a>
+    </div>
+  </div>
+  <!-- -----Contact----- -->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="subtitle">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane"></i> leowkeantat@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i> +(60)17-5845732</p>
+          
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+          <a href="documents/Leow_Kean_Tat_-_Resume.pdf" class="btn btn-submit" download>Download CV</a>
+        </div>
+        
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <input type="text" name="Name" placeholder="Enter your name here." required>
+            <input type="email" name="Email" placeholder="Enter your email here." required>
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn btn-submit">Submit</button>
+          </form>
+          <span id="post-submit-message"></span>
+        </div>
+        
+      </div>
+    </div>
+    <div class="copyright">
+      <p>Copyright © Leow Kean Tat (Kaz). Made with <i class="fa-solid fa-heart"></i> Replit.</p>
+    </div>
+  </div>
+  <!-- ----------------- -->
+  <script type="module" src="script.js">
+  </script>
+
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbw6HnHSBYuTk0o0z3gvnkZZlk8EAGJfcob1r1wCIXi4uZrYtaYzjMMy-MJzyezJ6_Wg/exec";
+    const form = document.forms["submit-to-google-sheet"];
+    const responseMsg = document.getElementById("post-submit-message");
+    
+    form.addEventListener("submit", e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          // Debug
+          console.log("Success!", response);
+
+          responseMsg.innerHTML = "Message sent successfully.";
+          setTimeout(function() {
+            responseMsg.innerHTML = "";
+          }, 5000);
+          form.reset();
+        })
+        .catch(error => {
+          // Debug
+          console.error("Error!", error.message);
+
+          responseMsg.innerHTML = "Failed to send the message.";
+          setTimeout(function() {
+            responseMsg.innerHTML = "";
+          })
+        })
+    });
   </script>
 </body>
 
