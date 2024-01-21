@@ -7,6 +7,8 @@
   <title>
     Portfolio Project - Leow Kean Tat (Kaz)
   </title>
+  <!-- ----------------- -->
+  <!-- Core CSS Stylesheet -->
   <link href="style.css" rel="stylesheet" type="text/css" />
   <!-- Font Awesome APIs -->
   <script src="https://kit.fontawesome.com/fdebea0a02.js" crossorigin="anonymous"></script>
@@ -26,11 +28,11 @@
   <!-- ----------------- -->
 </head>
 
-<body>  
+<body onload="onPageLoaded()">  
   <div id="header">
     <div class="container">
       <nav>
-        <img src="images/logo" alt="" class="logo">
+        <img src="images/logo.png" alt="" class="logo">
         <ul id="side-menu">
           <li><a href="#header">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -42,8 +44,11 @@
         <i class="fa-solid fa-bars" onclick="openMenu()"></i>
       </nav>
       <div class="header-text">
-        <p>Software Developer</p>
-        <h1>My name's <span>Leow Kean Tat</span>.<br>I'm from Penang, Malaysia.</h1>
+        <h1>My name's <span>Leow Kean Tat</span>.</h1>
+        <p>I am currently based in Penang, Malaysia. I am open to both remote and on-site work. My professions are as follows:</p>
+        <br/>
+        <p>• <span>Games Programmer</span> <i class="fa-solid fa-gamepad"></i> <i class="fa-solid fa-laptop"></i></p> 
+        <p>• <span>Software Developer</span> <i class="fa-brands fa-android"></i> <i class="fa-brands fa-apple"></i></p>
       </div>
     </div>
   </div>
@@ -53,12 +58,16 @@
     <div class="container">
       <div class="row">
         <div class="about-col-1">
-          <img src="images/user.jpg">
+          <img src="images/user-AI Gen-Fotor.jpg">
         </div>
         <div class="about-col-2">
           
           <h1 class="subtitle">About Me</h1>
-          <p id="about-summary">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris feugiat suscipit nisi, non aliquam leo convallis non. Integer eget sodales justo. Aliquam sagittis magna tellus, in vehicula lorem porta vitae. Fusce sed dignissim mauris. Suspendisse est nibh, egestas non iaculis ut, tincidunt vel sem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque non pharetra tellus. Phasellus a tempor velit.</p>
+          <p class="about-summary">Hello, readers! 👋 <span class="about-highlight-1">I'm Leow Kean Tat</span>. You may alternatively address me as <span class="about-highlight-1">Kaz</span>. I am a passionate (<span class="about-highlight-2">games and software</span>) developer with a knack for bringing ideas to life, regardless if it were <span class="about-highlight-1">interactive websites or video games</span>. My enthusiasm for the coding world began with a humble beginning of printing out "Hello, World" when I was in my teens. Since then, I'm on a journey to create experiences which would impact the world in the long term.</p>
+          <br>
+          <p class="about-summary">
+            Whether it be front-end magic, back-end wizardy or game logic black box shenanigans, I thrive on making sure lines of code <span class="about-highlight-2">adhere to established company standards</span> and subsequently <span class="about-highlight-2">transform</span> them into robust end-products for the clients and consumers.
+          </p>
 
           <div class="tab-titles">
             <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
@@ -68,25 +77,115 @@
           <!-- Skills -->
           <div id="skills" class="tab-contents active-tab">
             <ul>
-              <li><span>Skill 1</span><br>Description 1</li>
-              <li><span>Skill 2</span><br>Description 2</li>
-              <li><span>Skill 3</span><br>Description 3</li>
-              <li><span>Skill 4</span><br>Description 4</li>
+              <li>
+                <p class="tab-contents-title">
+                  Games Development
+                </p>
+                <p class="tab-contents-description">
+                  • 2D/3D Mobile & PC games via <span class="tab-contents-highlight">Unity Engine</span>.
+                </p>
+                <p class="tab-contents-description">
+                  • 3D Single-Player PC games via <span class="tab-contents-highlight">Unreal Engine 4</span>.
+                </p>
+                <p class="tab-contents-description">
+                  • Heavily utilizing the <span class="tab-contents-highlight">C++/C#</span> programming languages.
+                </p>
+              </li>
+              <li>
+                <p class="tab-contents-title">
+                  Software Development
+                </p>
+                <p class="tab-contents-description">
+                  • Front-End development via <span class="tab-contents-highlight">React Native</span>.
+                </p>
+                <p class="tab-contents-description">
+                  • Heavily utilizing the <span class="tab-contents-highlight">Javascript</span> programming and <span class="tab-contents-highlight">HTML/CSS/MySQL</span> scripting languages.
+                </p>
+                <p class="tab-contents-description">
+                  • Heavily utilizing the <span class="tab-contents-highlight">PHP</span> programming language.
+                </p>
+              </li>
+              <li>
+                <p class="tab-contents-title">
+                  Web Development
+                </p>
+                <p class="tab-contents-description">
+                  • Back-End development via <span class="tab-contents-highlight">Laravel Framework</span>.
+                </p>
+                <p class="tab-contents-description">
+                  • Heavily utilizing the <span class="tab-contents-highlight">PHP</span> programming language for APIs and server controller scripts.
+                </p>
+              </li>
             </ul>
           </div>
           <!-- Experience -->
           <div id="experience" class="tab-contents">
             <ul>
-              <li><span>Experience 1</span><br>Description 1</li>
-              <li><span>Experience 2</span><br>Description 2</li>
+              <li>
+                <p class="tab-contents-title">
+                  Senior Games Programmer at Kotakoren Games Studio
+                </p>
+                <p class="tab-contents-description">
+                  April 2022 - June 2023 (Remote).
+                </p>
+              </li>
+              <li>
+                <p class="tab-contents-title">
+                  Senior Game Programmer at Soulofox Studio
+                </p>
+                <p class="tab-contents-description">
+                  February 2022 - March 2022 (Remote).
+                </p>
+              </li>
+              <li>
+                <p class="tab-contents-title">
+                  Full Stack Developer (Junior) at Liquid Rock Games Studio
+                </p>
+                <p class="tab-contents-description">
+                  August 2017 - August 2019 (Remote).
+                </p>
+              </li>
+              <li>
+                <p class="tab-contents-title">
+                  Junior Games Programmer at Techninier Sdn Bhd
+                </p>
+                <p class="tab-contents-description">
+                  August 2016 - January 2017 (On-Site).
+                </p>
+              </li>
             </ul>
           </div>
           <!-- Education -->
           <div id="education" class="tab-contents">
             <ul>
-              <li><span>Education 1</span><br>Description 1</li>
-              <li><span>Education 2</span><br>Description 2</li>
-              <li><span>Education 3</span><br>Description 3</li>
+              <li>
+                <p class="tab-contents-title">
+                  <a href="https://www.uow.edu.my/campuses/about-the-campus/uow-malaysia-kdu-college/" target="_blank">
+                    UOWM KDU Glenmarie University College
+                  </a>
+                </p>
+                <p class="tab-contents-description">
+                  Bachelor's (Hons) Degree in Games Development, April 2013 - October 2016
+                </p>
+              </li>
+              <li>
+                <p class="tab-contents-title">
+                  <a href="https://www.uow.edu.my/campuses/about-the-campus/uow-malaysia-kdu-penang-university-college/" target="_blank">
+                    UOWM KDU Penang University College
+                  </a>
+                </p>
+                <p class="tab-contents-description">
+                  Diploma in Games Technology, January 2011 - April 2013
+                </p>
+              </li>
+              <li>
+                <p class="tab-contents-title">
+                Saint Xavier's Institution
+                </p>
+                <p class="tab-contents-description">
+                  Sijil Pelajaran Malaysia (SPM) - 2010
+                </p>
+              </li>
             </ul>
           </div>
         </div>
@@ -99,24 +198,24 @@
       <h1 class="subtitle">My Services</h1>
       <div class="services-list">
         <div>
-          <i class="fa-solid fa-code"></i>
-          <h2>Service 1</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <a href="#">Learn More</a>
+          <span>
+            <i class="fa-brands fa-android"></i>
+            <i class="fa-brands fa-apple"></i>
+          </span>
+          <h2>App Development</h2>
+          <p>Code planning and execution with front-end libraries such as React Native.</p>
         </div>
 
         <div>
           <i class="fa-solid fa-gamepad"></i>
-          <h2>Service 2</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <a href="#">Learn More</a>
+          <h2>Game Development</h2>
+          <p>Bringing game mechanics to life via code development in the Unity and Unreal Engine. </p>
         </div>
 
         <div>
-          <i class="fa-brands fa-android"></i>
-          <h2>Service 3</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <a href="#">Learn More</a>
+          <i class="fa-solid fa-globe"></i>
+          <h2>Web Development</h2>
+          <p>Providing clients with user-friendly back-end control hubs via Laravel to perform administrative tasks.</p>
         </div>
       </div>
     </div>
@@ -125,39 +224,8 @@
   <div id="portfolio">
     <div class="container">
       <h1 class="subtitle">Portfolio</h1>
-      <div class="work-list">
-        <div class="work">
-          
-          <img src="images/work-1.png" alt="">
-          <div class="layer">
-            <h3>App 1</h3>
-            <p>Description Here</p>
-            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-          
-        </div>
-        <div class="work">
-          
-          <img src="images/work-2.png" alt="">
-          <div class="layer">
-            <h3>App 2</h3>
-            <p>Description Here</p>
-            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-          
-        </div>
-        <div class="work">
-          
-          <img src="images/work-3.png" alt="">
-          <div class="layer">
-            <h3>App 3</h3>
-            <p>Description Here</p>
-            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-          
-        </div>
-      </div>
-      <a href="#" class="btn">See More</a>
+      <div id="portfolio-work-group" class="work-list"></div>
+      <button id="portfolio-work-button" class="btn btn-show-more" onclick="updatePortfolioList()">See More</button>
     </div>
   </div>
   <!-- -----Contact----- -->
@@ -170,10 +238,9 @@
           <p><i class="fa-solid fa-phone"></i> +(60)17-5845732</p>
           
           <div class="social-icons">
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/in/kazcade/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://projectkazcade.itch.io/" target="_blank"><i class="fa-brands fa-itch-io"></i></i></a>
+            <a href="https://wa.me/60175845732" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
           </div>
           <a href="documents/Leow_Kean_Tat_-_Resume.pdf" class="btn btn-submit" download>Download CV</a>
         </div>
@@ -191,12 +258,11 @@
       </div>
     </div>
     <div class="copyright">
-      <p>Copyright © Leow Kean Tat (Kaz). Made with <i class="fa-solid fa-heart"></i> Replit.</p>
+      <p>Copyright © Leow Kean Tat (Kaz). Made with <i class="fa-solid fa-heart"></i> from Replit.</p>
     </div>
   </div>
   <!-- ----------------- -->
-  <script type="module" src="script.js">
-  </script>
+  <script type="module" src="./scripts/script.js"></script>
 
   <script>
     const scriptURL = "https://script.google.com/macros/s/AKfycbw6HnHSBYuTk0o0z3gvnkZZlk8EAGJfcob1r1wCIXi4uZrYtaYzjMMy-MJzyezJ6_Wg/exec";
