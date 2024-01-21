@@ -24,6 +24,7 @@ const projects = [
     imageSrc: "images/work-3.png",
     url: "https://appadvice.com/app/carriage-for-her-driver-app/1433325302"
   },
+  /*
   {
     idPrefix: "work-project-",
     name: "Carriage For Her (Discontinued)",
@@ -31,6 +32,7 @@ const projects = [
     imageSrc: "images/work-3.png",
     url: "https://appadvice.com/app/carriage-for-her-driver-app/1433325302"
   }
+  */
   // ------
 ];
 
