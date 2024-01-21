@@ -24,7 +24,6 @@ const projects = [
     imageSrc: "images/work-3.png",
     url: "https://appadvice.com/app/carriage-for-her-driver-app/1433325302"
   },
-  /*
   {
     idPrefix: "work-project-",
     name: "Carriage For Her (Discontinued)",
@@ -32,7 +31,6 @@ const projects = [
     imageSrc: "images/work-3.png",
     url: "https://appadvice.com/app/carriage-for-her-driver-app/1433325302"
   }
-  */
   // ------
 ];
 
@@ -69,7 +67,7 @@ export function updatePortfolioList(refreshList = false) {
           <div class="layer">
             <h3>${projects[i].name}</h3>
             <p>${projects[i].description}</p>
-            <a href="${projects[i].url}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-squs
+            <a href="${projects[i].url}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
           </div>
         </div>
       `;

@@ -1,3 +1,4 @@
+
 html {
   height: 100%;
   width: 100%;
@@ -261,19 +262,13 @@ nav .fa-solid {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 40px;
   margin-top: 50px;
-  transition: 0.5s;
-  background-color: yellow;
-  max-height: fit-content;
-}
-
-.work-list:hover {
-  background-color: white;
 }
 
 .work {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
+  transition: visibility 1s;
 }
 
 .work img {
