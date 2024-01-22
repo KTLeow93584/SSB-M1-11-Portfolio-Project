@@ -3,7 +3,7 @@ const projects = [
   // ------
   {
     idPrefix: "work-project-",
-    name: "Descent (Combat Prototype)",
+    name: "Descent",
     description: "A character-driven real time tactics game inspired by the South East Asian (SEA) lore.",
     imageSrc: "images/work-1.png",
     url: "https://kotakoren.itch.io/descent"
@@ -12,7 +12,7 @@ const projects = [
   {
     idPrefix: "work-project-",
     name: "Letters",
-    description: "A casual rhythm storytelling game about a boy and a girl attempting to connect to each another from different parts of the world. (Lvl Up KL 2016 Game Jam Runner Up)",
+    description: "A rhythm game about a boy and a girl sending messages to each other from different parts of the world.",
     imageSrc: "images/work-2.png",
     url: "https://pixelfr0ggie.itch.io/letters"
   },
@@ -26,15 +26,15 @@ const projects = [
   },
   {
     idPrefix: "work-project-",
-    name: "Simple Board Games (Personal Project)",
-    description: "A combination of mini-games (Tic-tac-toe, Connect 4 and Reversi). This project's goal is to develop an AI that's unbeatable.",
+    name: "Simple Board Games",
+    description: "A combination of mini-games (Tic-tac-toe, Connect 4 and Reversi).",
     imageSrc: "images/work-4.png",
     url: "https://projectkazcade.itch.io/simple-board-games"
   },
   {
     idPrefix: "work-project-",
-    name: "Chess (Personal Project)",
-    description: "A chess project using traditional BFS/DFS algorithms, aimed at trying to reach as high of an ELO possible.",
+    name: "Chess",
+    description: "A personal chess project, the AI uses traditional BFS/DFS algorithms.",
     imageSrc: "images/work-5.png",
     url: "https://projectkazcade.itch.io/chess"
   }
@@ -138,11 +138,12 @@ function onSwitchElement() {
 
 function onFadeOut() {
   elementToFadeOut.classList.remove(fadeOutClassName);
-  elementToFadeOut.classList.add("hidden");
 
   elementToFadeIn.classList.add(fadeInClassName);
   elementToFadeIn.classList.remove("hidden");
   fadeOutQuery.removeEventListener("animationend", onFadeOut);
+  
+  elementToFadeOut.classList.add("hidden");
 
   fadeInQuery = document.querySelector("." + fadeInClassName);
   fadeInQuery.addEventListener("animationend", onFadeIn);
