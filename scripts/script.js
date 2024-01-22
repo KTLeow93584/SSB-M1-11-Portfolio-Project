@@ -1,4 +1,4 @@
-import { updatePortfolioList } from "./portfolio.js";
+import { updatePortfolioList, showNextPortfolio, showPreviousPortfolio } from "./portfolio.js";
 // =================================
 function openTab(tabName) {
   const tabLinks = document.getElementsByClassName("tab-links");
@@ -36,12 +36,15 @@ function onPageLoaded() {
     var img = new Image();
     img.src = "images/" + imageFileNames[i];
   }
-  updatePortfolioList(true);
+  updatePortfolioList();
 }
 // =================================
 window.openTab = openTab;
 window.closeMenu = closeMenu;
 window.openMenu = openMenu;
 window.onPageLoaded = onPageLoaded;
+
 window.updatePortfolioList = updatePortfolioList;
+window.showNextPortfolio = showNextPortfolio;
+window.showPreviousPortfolio = showPreviousPortfolio;
 // =================================

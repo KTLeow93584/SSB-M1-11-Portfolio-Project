@@ -224,8 +224,11 @@
   <div id="portfolio">
     <div class="container">
       <h1 class="subtitle">Portfolio</h1>
-      <div id="portfolio-work-group" class="work-list"></div>
-      <button id="portfolio-work-button" class="btn btn-show-more" onclick="updatePortfolioList()">See More</button>
+      <div class="work-button-group">
+        <button id="portfolio-work-button-previous" class="btn btn-move" onclick="showPreviousPortfolio()"><</button>
+        <div id="portfolio-work-group" class="work-list"></div>
+        <button id="portfolio-work-button-next" class="btn btn-move" onclick="showNextPortfolio()">></button>
+      </div>
     </div>
   </div>
   <!-- -----Contact----- -->
@@ -274,7 +277,7 @@
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => {
           // Debug
-          console.log("Success!", response);
+          //console.log("Success!", response);
 
           responseMsg.innerHTML = "Message sent successfully.";
           setTimeout(function() {
@@ -284,7 +287,7 @@
         })
         .catch(error => {
           // Debug
-          console.error("Error!", error.message);
+          //console.error("Error!", error.message);
 
           responseMsg.innerHTML = "Failed to send the message.";
           setTimeout(function() {

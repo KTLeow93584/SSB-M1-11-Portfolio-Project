@@ -25,6 +25,14 @@ body {
 .hidden {
   display: none;
 }
+
+.pointer-interact-disabled {
+  pointer-events: none;
+}
+
+.pointer-interact-enabled {
+  pointer-events: auto;
+}
 /* ------------------------------------ */
 /* Header */
 #header {
@@ -183,11 +191,13 @@ nav .fa-solid {
 }
 
 .tab-contents ul li a {
-  text-decoration: none;
+  color: lightblue;
+  text-decoration: underline;
 }
 
 .tab-contents ul li .tab-contents-title {
   color: #ff004f;
+  /* color: #23ff55;*/
   font-size: 24px;
 }
 
@@ -258,19 +268,63 @@ nav .fa-solid {
 }
 
 .work-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 40px;
-  margin-top: 50px;
+  flex-basis: 100%;
 }
 
 .work {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
-  transition: visibility 1s;
+}
+/* --------------- */
+/* Directional Fades (<--- Left) */
+.work-fade-in-left {
+  opacity: 1;
+  display: block;
+  left: 0%;
+  animation: fade-in-left 0.25s linear;
 }
 
+@keyframes fade-in-left {
+  0% { opacity: 0; left: 100%; }
+  100% { opacity: 1; left: 0%; }
+}
+
+.work-fade-out-left {
+  opacity: 0;
+  left: -100%;
+  animation: fade-out-left 0.25s linear;
+}
+
+@keyframes fade-out-left {
+  0% { opacity: 1; left: 0%; }
+  100% { opacity: 0; left: -100%; }
+}
+/* --------------- */
+/* Directional Fades (---> Right) */
+.work-fade-in-right {
+  opacity: 1;
+  display: block;
+  left: 0%;
+  animation: fade-in-right 0.25s linear;
+}
+
+@keyframes fade-in-right {
+  0% { opacity: 0; left: -100%; }
+  100% { opacity: 1; left: 0%; }
+}
+
+.work-fade-out-right {
+  opacity: 0;
+  left: 100%;
+  animation: fade-out-right 0.25s linear;
+}
+
+@keyframes fade-out-right {
+  0% { opacity: 1; left: 0%; }
+  100% { opacity: 0; left: 100%; }
+}
+/* --------------- */
 .work img {
   width: 100%;
   border-radius: 10px;
@@ -329,6 +383,14 @@ nav .fa-solid {
   text-align: center;
 }
 
+.work-button-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
 .btn {
   display: block;
   margin: 50px auto;
@@ -349,8 +411,10 @@ nav .fa-solid {
   background: #ff004f;
 }
 
-.btn.btn-show-more {
+.btn.btn-move {
   cursor: pointer;
+  padding: 3px 15px;
+  margin: 0px 15px;
 }
 /* ------------------------------------ */
 /* Contact Me */
@@ -442,7 +506,7 @@ form .btn-submit {
 /* CSS for small screens */
 @media only screen and (max-width: 1200px) {
   #header {
-    background-image: url("images/profile-50perc-portrait-2.png");
+    background-image: url("images/profile-50perc-portrait.png");
   }
 
   .header-text {
