@@ -99,8 +99,8 @@ export function showNextPortfolio() {
 
   onSuccessfulCallback = onSuccessfulTransitionAdd;
   
-  fadeInClassName = "work-fade-in-right";
-  fadeOutClassName = "work-fade-out-right";
+  fadeInClassName = "work-fade-in-left";
+  fadeOutClassName = "work-fade-out-left";
   
   onSwitchElement();
 }
@@ -111,8 +111,8 @@ export function showPreviousPortfolio() {
 
   onSuccessfulCallback = onSuccessfulTransitionSubtract;
 
-  fadeInClassName = "work-fade-in-left";
-  fadeOutClassName = "work-fade-out-left";
+  fadeInClassName = "work-fade-in-right";
+  fadeOutClassName = "work-fade-out-right";
   
   onSwitchElement();
 }
